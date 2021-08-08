@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'e-Diaristas',
+    'title' => 'E-Diaristas',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -46,11 +46,11 @@ return [
     */
 
     'logo' => '<b>Administração</b>',
-    'logo_img' => 'Logo.png',
+    'logo_img' => 'logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'e-Diaristas',
+    'logo_img_alt' => 'E-Diaristas',
 
     /*
     |--------------------------------------------------------------------------
@@ -231,15 +231,33 @@ return [
             'icon'    => 'fas fa-fw fa-broom',
             'submenu' => [
                 [
-                    'text' => 'Listar Serviços',
+                    'text' => 'Lista de Serviços',
                     'route'  => 'servicos.index',
                     'icon'    => 'fas fa-fw fa-list',
                 ],
                 [
-                    'text' => 'Cadastrar Serviços',
-                    'url'  => '#',
+                    'text' => 'Novo Serviço',
+                    'route'  => 'servicos.create',
                     'icon'    => 'fas fa-fw fa-file',
                 ],
+                
+            ],
+        ],
+        [
+            'text'    => 'Cadastro de Usuários',
+            'icon'    => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Usuários',
+                    'route'  => 'usuarios.index',
+                    'icon'    => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Novo Usuário',
+                    'route'  => 'usuarios.create',
+                    'icon'    => 'fas fa-fw fa-file',
+                ],
+                
             ],
         ],
     ],
@@ -279,6 +297,16 @@ return [
     */
 
     'plugins' => [
+        'jqueryMask' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js',
+                ],
+            ]
+        ],
         'Datatables' => [
             'active' => false,
             'files' => [

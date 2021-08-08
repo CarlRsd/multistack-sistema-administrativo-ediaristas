@@ -1,16 +1,16 @@
-## Projeto sistema administrativo da plataforma e-diaristas
+## Projeto sistema administrativo da plataforma E-Diaristas
 
-Desenvolvido no curso de Multi-stack da Treinaweb
+Desenvolvido no curso multi-stack da treinaweb
 
-## Instalado o projeto
+### Instalando o projeto
 
 #### Clonar o repositório
 
 ```
-git clone https://github.com/CarlRsd/multistack-sistema-administrativo-ediaristas.git
+git clone https://github.com/treinaweb/multistack-sistema-administrativo-ediaristas-php.git
 ```
 
-#### Instalar as dependências
+#### Instalar as depencências
 
 ```
 composer install
@@ -24,13 +24,23 @@ composer update
 
 #### Criar arquivo de configurações de ambiente
 
-Copiar o arquivo de exemplo `.env.example` para `.env` na raiz do projeto e em seguida configurar os detalhes de configuração da aplicação e do banco de dados.
+Copiar o arquivo de exemplo `.env.example` para `.env` na raiz do projeto
+configurar os detalhes da aplicação e conexão com o banco de dados.
 
 #### Criar a estrutura no banco de dados
 
 ```
 php artisan migrate
 ```
+
+#### Criar o usuário admin
+
+```
+php artisan db:seed
+```
+
+Usuário criado admin@admin.com  
+Senha: 123123123
 
 #### Iniciar o servidor de desenvolvimento
 

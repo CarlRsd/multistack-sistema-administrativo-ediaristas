@@ -7,6 +7,5 @@
 @stop
 
 @section('content')
-    <p>Bemvindo ao e-diaristas.</p>
+    <p>Bem Vindos ao E-Diaristas.</p>
 @stop
-
